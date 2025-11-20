@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Harvest & Revival - Non-Denominational Ministry</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body id="top" class="dark_theme">
+    <!-- NAVIGATION -->
+    <header class="header" data-header>
+      <div class="container">
+        <div class="h1 logo">
+          <img src="./assets/images/logo2.png" alt="" />
+        </div>
+
+        <div class="navbar-actions">
+          <select name="language" id="lang">
+            <option value="en">En</option>
+          </select>
+
+          <button
+            class="theme-btn"
+            aria-label="Change Theme"
+            title="Change Theme"
+            data-theme-btn
+          >
+            <span class="icon"></span>
+          </button>
+        </div>
+
+        <button
+          class="nav-toggle-btn"
+          aria-label="Toggle Menu"
+          title="Toggle Menu"
+          data-nav-toggle-btn
+        >
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+        <!-- NAV BAR -->
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="./index.html" class="navbar-link">Home.</a>
+            </li>
+            <li>
+              <a href="#about" class="navbar-link">About Us.</a>
+            </li>
+            <!-- <li>
+              <a href="#vision&mission" class="navbar-link"
+                >Vision & Mission.</a
+              >
+            </li> -->
+            <li>
+              <a href="#crusades" class="navbar-link">Crusades.</a>
+            </li>
+            <li>
+              <a href="./testimonies.html" class="navbar-link">Testimonies.</a>
+            </li>
+            <li>
+              <a href="#bookings" class="navbar-link" title="Make Bookings"
+                >Bookings.</a
+              >
+            </li>
+            <li>
+              <a href="#sermons" class="navbar-link">Sermons.</a>
+            </li>
+            <li>
+              <a href="#giving" class="navbar-link">Givings.</a>
+            </li>
+            <li>
+              <a href="#biograph" class="navbar-link">Bio Of Leaders.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article class="container">
+        <!-- TESTIMONIALS -->
+        <section class="project" id="portfolio">
+          <div class="about-content section-content">
+            <p class="section-subtitle">Powerful Testimonies</p>
+            <h2 class="h3 section-title">
+              Global Harvest & Revival Ministries
+            </h2>
+            <p class="section-text">
+              Global Harvest and Revival is a non-denominational ministry
+              dedicated to reaching the world with the Gospel of Jesus Christ,
+              focusing on soul winning and providing teachings that stir
+              revival, healing, deliverance and empower people for victorious
+              living.
+            </p>
+          </div>
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <div class="video-wrapper">
+                <video
+                  src="./assets/images/about-bg.mp4"
+                  poster="./assets/images/testimonial-thumbnail.png"
+                ></video>
+                <div class="play-overlay">
+                  <ion-icon name="play-circle"></ion-icon>
+                </div>
+              </div>
+              <h3>Healing Testimony!</h3>
+              <p>
+                “After struggling with constant back pain for years, she
+                encountered the power of God — and walked away completely
+                healed.”
+              </p>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="video-wrapper">
+                <video src="video2.mp4" poster="thumb2.jpg"></video>
+                <div class="play-overlay">
+                  <ion-icon name="play-circle"></ion-icon>
+                </div>
+              </div>
+              <h3>Michael Lee</h3>
+              <p>“Highly professional and easy to work with.”</p>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="video-wrapper">
+                <video src="video3.mp4" poster="thumb3.jpg"></video>
+                <div class="play-overlay">
+                  <ion-icon name="play-circle"></ion-icon>
+                </div>
+              </div>
+              <h3>Emma Davis</h3>
+              <p>“A truly amazing experience from start to finish.”</p>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="video-wrapper">
+                <video src="video4.mp4" poster="thumb4.jpg"></video>
+                <div class="play-overlay">
+                  <ion-icon name="play-circle"></ion-icon>
+                </div>
+              </div>
+              <h3>James Smith</h3>
+              <p>“They went above and beyond my expectations.”</p>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="video-wrapper">
+                <video src="video5.mp4" poster="thumb5.jpg"></video>
+                <div class="play-overlay">
+                  <ion-icon name="play-circle"></ion-icon>
+                </div>
+              </div>
+              <h3>Olivia Brown</h3>
+              <p>“Simply the best! Highly recommended.”</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Fullscreen Video Modal -->
+        <div class="video-modal" id="videoModal">
+          <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls></video>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <div class="container">
+            <p class="h1 logo">
+              <a href="#">
+                <img src="./assets/images/logo.png" alt="" />
+              </a>
+            </p>
+
+            <p class="copyright">
+              &copy; 2025 <a href="#">Global Harvest & Revival</a>. All rights
+              reserved
+            </p>
+          </div>
+        </footer>
+
+        <!-- GO TO TOP -->
+        <a href="#top" class="go-top" data-go-top title="Go to Top">
+          <ion-icon name="arrow-up"></ion-icon>
+        </a>
+      </article>
+    </main>
+
+    <!-- Custom js link -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- ionicons link -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
