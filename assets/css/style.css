@@ -1297,7 +1297,7 @@ CRUSADES SECTION
   gap: 12px; /* Adds space between buttons */
   flex-wrap: wrap; /* Optional: allows wrapping on smaller screens */
   justify-content: center; /* Optional: centers buttons horizontally */
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .crusades_filter {
@@ -1323,7 +1323,8 @@ button.activee {
 }
 
 .image_card {
-  /* flex-grow: 1; */
+  width: 100%;
+  flex-grow: 1;
   flex-basis: 300px;
   background-color: #fff;
   padding: 3px;
