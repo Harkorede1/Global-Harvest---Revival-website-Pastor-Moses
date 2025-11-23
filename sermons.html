@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Harvest & Revival - Non-Denominational Ministry</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@400;700&family=Saira+Stencil+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body id="top" class="dark_theme">
+    <!-- NAVIGATION -->
+    <header class="header" data-header>
+      <div class="container">
+        <div class="h1 logo">
+          <img src="./assets/images/logo2.png" alt="" />
+        </div>
+
+        <div class="navbar-actions">
+          <select name="language" id="lang">
+            <option value="en">En</option>
+          </select>
+
+          <button
+            class="theme-btn"
+            aria-label="Change Theme"
+            title="Change Theme"
+            data-theme-btn
+          >
+            <span class="icon"></span>
+          </button>
+        </div>
+
+        <button
+          class="nav-toggle-btn"
+          aria-label="Toggle Menu"
+          title="Toggle Menu"
+          data-nav-toggle-btn
+        >
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+        <!-- NAV BAR -->
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li>
+              <a href="./index.html" class="navbar-link">Home.</a>
+            </li>
+            <li>
+              <a href="./about.html" class="navbar-link">About Us.</a>
+            </li>
+            <li>
+              <a href="./crusades.html" class="navbar-link">Crusades.</a>
+            </li>
+            <li>
+              <a href="./testimonies.html" class="navbar-link">Testimonies.</a>
+            </li>
+            <li>
+              <a href="./booking.html" class="navbar-link" title="Make Bookings"
+                >Bookings.</a
+              >
+            </li>
+            <li>
+              <a href="./sermons.html" class="navbar-link">Sermons.</a>
+            </li>
+            <li>
+              <a href="#giving" class="navbar-link">Givings.</a>
+            </li>
+            <li>
+              <a href="#biograph" class="navbar-link">Bio Of Leaders.</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <article class="container1">
+        <!-- SERMONS -->
+        <section class="container2">
+          <div class="player-img">
+            <img
+              src="./assets/images/pastor-moses-booking-sec.jpg"
+              alt=""
+              class="activeee"
+              id="cover2"
+            />
+          </div>
+
+          <h2 class="music-title" id="music-title">Test</h2>
+          <h3 class="music-artist" id="music-artist">Test H2</h3>
+
+          <div class="player-progress" id="player-progress">
+            <div class="progress" id="progress"></div>
+
+            <div class="music-duration" style="display: flex">
+              <span id="current-time">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+          </div>
+
+          <div class="player-controls" style="display: flex">
+            <ion-icon name="arrow-back" title="Previous"></ion-icon>
+            <ion-icon name="play" title="play"></ion-icon>
+            <ion-icon name="arrow-forward" title="Next"></ion-icon>
+          </div>
+        </section>
+
+        <!-- Fullscreen Video Modal -->
+        <div class="video-modal" id="videoModal">
+          <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video id="modalVideo" controls></video>
+          </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <div class="container">
+            <p class="h1 logo">
+              <a href="#">
+                <img src="./assets/images/logo.png" alt="" />
+              </a>
+            </p>
+
+            <p class="copyright">
+              &copy; 2025 <a href="#">Global Harvest & Revival</a>. All rights
+              reserved
+            </p>
+          </div>
+        </footer>
+
+        <!-- GO TO TOP -->
+        <a href="#top" class="go-top" data-go-top title="Go to Top">
+          <ion-icon name="arrow-up"></ion-icon>
+        </a>
+      </article>
+    </main>
+
+    <!-- Custom js link -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- ionicons link -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
