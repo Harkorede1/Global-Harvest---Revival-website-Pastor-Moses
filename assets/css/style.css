@@ -1171,8 +1171,8 @@ textarea.input-field {
 .music-title {
   font-size: 25px;
   text-align: center;
-  font-weight: 500;
-  margin: 30px 0 0;
+  font-weight: 800;
+  margin: 10px 0 0;
 }
 
 .music-artist {
@@ -1180,6 +1180,58 @@ textarea.input-field {
   text-align: center;
   font-weight: 300;
   margin: 10px 0 20px;
+}
+
+.player-progress{
+background-color: #fff;
+border-radius: 5px;
+cursor: pointer;
+height: 6px;
+margin: 40px 20px 35px;
+width: 90%;
+}
+
+.progress{
+  background-color: #212121;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.music-duration {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-controls{
+  position: relative;
+  top: -5px;
+  display: flex;
+  justify-content: center;
+  left: 120px;
+  width: 200px;
+}
+
+.fa-solid{
+  font-size: 30px;
+  color: var(--raw-seinna);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.fa-solid:hover{
+  filter: brightness(40%)
+}
+
+.play-button{
+  font-size: 44px;
+  position: relative;
+  top: -6px;
 }
 
 @keyframes zoomIn {
