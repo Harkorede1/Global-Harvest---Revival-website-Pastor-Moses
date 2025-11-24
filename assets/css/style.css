@@ -496,6 +496,12 @@ main {
   padding-bottom: 15px;
 }
 
+.hero-h2-booking{
+  color: var(--color-primary);
+  font-family: var(--ff-poppins);
+  line-height: 1.2;
+}
+
 /* STATS */
 section.stats {
   position: relative;
