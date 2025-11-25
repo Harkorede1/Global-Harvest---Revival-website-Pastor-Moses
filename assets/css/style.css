@@ -1341,7 +1341,7 @@ CRUSADES SECTION
   max-width: 1350px;
   width: 100%;
   padding: 20px;
-  margin: 50px auto;
+  margin: auto;
 }
 
 .filter_buttons {
@@ -1395,7 +1395,7 @@ button.activee {
 }
 
 .card_body {
-  padding: 15px 20px 20px;
+  padding: 5px;
 }
 
 .card_title {
@@ -1405,7 +1405,7 @@ button.activee {
 }
 
 .card_text {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-secondary);
 }
 
