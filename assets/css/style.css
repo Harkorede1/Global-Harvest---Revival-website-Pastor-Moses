@@ -1610,6 +1610,15 @@ button.activee {
     padding-top: 0 !important;
   }
 
+  .container1 #stats .hero-title {
+    padding-top: 0 !important;
+  }
+
+  .container1 {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
   /**
    * HERO
    */
