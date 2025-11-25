@@ -3,7 +3,6 @@
 /**
  * element toggle function
  */
-
 const elemToggleFunc = function (elem) {
   elem.classList.toggle("active");
 };
@@ -11,7 +10,6 @@ const elemToggleFunc = function (elem) {
 /**
  * header sticky & go to top
  */
-
 const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
 
@@ -28,7 +26,6 @@ window.addEventListener("scroll", function () {
 /**
  * navbar toggle
  */
-
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 const navbar = document.querySelector("[data-navbar]");
 
@@ -41,7 +38,6 @@ navToggleBtn.addEventListener("click", function () {
 /**
  * dark & light theme toggle
  */
-
 const themeToggleBtn = document.querySelector("[data-theme-btn]");
 
 themeToggleBtn.addEventListener("click", function () {
@@ -92,7 +88,6 @@ modal.addEventListener("click", (e) => {
 /**
  * check & apply last time selected theme from localStorage
  */
-
 if (localStorage.getItem("theme") === "light_theme") {
   themeToggleBtn.classList.add("active");
   document.body.classList.remove("dark_theme");
@@ -111,10 +106,34 @@ const filterableCards = document.querySelectorAll(".filterable-cards .card");
 const filterCards = (e) => {
   document.querySelector(".activee").classList.remove("activee");
   e.target.classList.add("activee");
-  console.log(e.target);
 };
 
 // Add click event listener to each filter button
 filterButtons.forEach((button) =>
   button.addEventListener("click", filterCards)
 );
+
+/* -------------------------------------------------------
+   🔥 IMAGE CLICK → FULLSCREEN ZOOM MODAL (New Feature)
+------------------------------------------------------- */
+const zoomImages = document.querySelectorAll(".zoom-img");
+const imgModal = document.getElementById("imgModal");
+const imgModalContent = document.getElementById("imgModalContent");
+const imgClose = document.getElementById("imgClose");
+
+zoomImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    imgModal.classList.add("active");
+    imgModalContent.src = img.src;
+  });
+});
+
+imgClose.addEventListener("click", () => {
+  imgModal.classList.remove("active");
+});
+
+imgModal.addEventListener("click", (e) => {
+  if (e.target === imgModal) {
+    imgModal.classList.remove("active");
+  }
+});

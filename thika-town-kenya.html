@@ -87,67 +87,175 @@
     </header>
 
     <main>
-      <!-- Crusade -->
-
-      <!-- Filter buttons -->
-      <div class="crusades_container">
-        <div class="filter_buttons">
-          <button class="crusades_filter activee" data-name="all">
-            Show All
-          </button>
-          <button class="crusades_filter" data-name="phones">Phones</button>
-          <button class="crusades_filter" data-name="clothes">Clothes</button>
-          <button class="crusades_filter" data-name="shoes">Shoes</button>
+      <!-- Name of Page - Crusade -->
+      <section
+        class="stats"
+        id="stats"
+        style="
+          background: url(/assets/images/crowd-of-people2.jpg) no-repeat center
+            center/cover;
+          height: 250px;
+          top: 0px;
+          bottom: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div class="hero-content">
+          <h2 class="h2 hero-title" style="padding-top: 50px">Crusades.</h2>
         </div>
+      </section>
 
-        <!-- Image Card -->
-        <div class="filterable_card">
-          <div class="image_card" data-name="phones">
-            <img src="./assets/images/testimonial-thumbnail.png" alt="" />
-            <div class="card_body">
-              <h6 class="card_title">Phone</h6>
-              <p class="card_text">Lorem, ipsum dolor.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="filterable_card">
-          <div class="image_card" data-name="phones">
-            <img src="./assets/images/testimonial-thumbnail.png" alt="" />
-            <div class="card_body">
-              <h6 class="card_title">Kenya</h6>
-              <p class="card_text">Lorem, ipsum dolor.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="filterable_card">
-          <div class="image_card" data-name="phones">
-            <img src="./assets/images/testimonial-thumbnail.png" alt="" />
-            <div class="card_body">
-              <h6 class="card_title">Nigeria</h6>
-              <p class="card_text">Lorem, ipsum dolor.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="filterable_card">
-          <div class="image_card" data-name="phones">
-            <img src="./assets/images/testimonial-thumbnail.png" alt="" />
-            <div class="card_body">
-              <h6 class="card_title">Uganda</h6>
-              <p class="card_text">Lorem, ipsum dolor.</p>
-            </div>
-          </div>
-        </div>
+      <!-- BACK BUTTON -->
+      <div class="ghr-back-btn">
+        <button onclick="window.history.back()" class="back-btn">
+          <ion-icon name="arrow-back-circle"></ion-icon>
+          <span>Back</span>
+        </button>
       </div>
 
-      <!-- Fullscreen Video Modal -->
-      <div class="video-modal" id="videoModal">
-        <div class="modal-content">
-          <span class="close-modal">&times;</span>
-          <video id="modalVideo" controls></video>
+      <!-- IMAGE GALLERY SECTION -->
+      <section class="ghr-gallery-section">
+        <div class="ghr-gallery-container">
+          <!-- CARD 1 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-10 (2).jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-10 (2).jpg"
+              alt="Kenya Crusade"
+            />
+          </a>
+
+          <!-- CARD 2 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-10.jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-10.jpg"
+              alt="Kenya Crusade"
+            />
+          </a>
+
+          <!-- CARD 3 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-11 (2).jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-11 (2).jpg"
+              alt="Nigeria Crusade"
+            />
+          </a>
+
+          <!-- CARD 4 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-11 (3).jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-11 (3).jpg"
+              alt="Uganda Crusade"
+            />
+          </a>
+
+          <!-- CARD 5 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-11 (4).jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-11 (4).jpg"
+              alt="Uganda Crusade"
+            />
+          </a>
+
+          <!-- CARD 6 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-11.jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-11.jpg"
+              alt="Uganda Crusade"
+            />
+          </a>
+
+          <!-- CARD 7 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-12 (2).jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-12 (2).jpg"
+              alt="Uganda Crusade"
+            />
+          </a>
+
+          <!-- CARD 8 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-12 (3).jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-12 (3).jpg"
+              alt="Uganda Crusade"
+            />
+          </a>
+
+          <!-- CARD 8 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-12 (4).jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-12 (4).jpg"
+              alt="Uganda Crusade"
+            />
+          </a>
+
+          <!-- CARD 9 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-12.jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-12.jpg"
+              alt="Uganda Crusade"
+            />
+          </a>
+
+          <!-- CARD 10 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-13 (2).jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-13 (2).jpg"
+              alt="Uganda Crusade"
+            />
+          </a>
+
+          <!-- CARD 11 -->
+          <a
+            href="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-13.jpg"
+            class="ghr-gallery-card"
+          >
+            <img
+              src="./assets/images/thika-town-kenya-images/photo_2025-11-24_10-30-13.jpg"
+              alt="Uganda Crusade"
+            />
+          </a>
         </div>
+      </section>
+
+      <!-- IMAGE LIGHTBOX -->
+      <div id="ghr-lightbox" class="ghr-lightbox">
+        <span class="ghr-lightbox-close">&times;</span>
+        <img class="ghr-lightbox-img" id="ghr-lightbox-img" />
       </div>
 
       <!-- FOOTER -->
