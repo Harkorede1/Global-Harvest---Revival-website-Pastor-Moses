@@ -456,6 +456,29 @@ body.active {
   width: 100%;
 }
 
+/* Page Title */
+section.page-title {
+  position: relative;
+  width: 100vw; /* full viewport width */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding-block: var(--section-padding);
+  background: url("/assets/images/stats-bg-3.jpg") no-repeat center center/cover;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.page-title::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* optional: overlay tint */
+  z-index: -1;
+}
+
 /* HERO */
 main {
   overflow-x: hidden;
@@ -496,7 +519,7 @@ main {
   padding-bottom: 15px;
 }
 
-.hero-h2-booking{
+.hero-h2-booking {
   color: var(--color-primary);
   font-family: var(--ff-poppins);
   line-height: 1.2;
@@ -1112,10 +1135,9 @@ textarea.input-field {
 
 /* Sermon Section */
 .container1 {
-
   justify-content: center; /* centers horizontally */
-  align-items: center;     /* centers vertically */
-  min-height: 100vh;       /* full viewport height */
+  align-items: center; /* centers vertically */
+  min-height: 100vh; /* full viewport height */
   padding-top: 100px;
 }
 
@@ -1123,20 +1145,18 @@ textarea.input-field {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
 }
 
-
 .container2 {
   background-color: var(--bg-secondary);
   height: 500px;
   width: 400px;
   margin: 100px auto; /* centers horizontally + adds top spacing */
-  
+
   flex-direction: column;
   align-items: center;
-  
+
   border-radius: var(--radius-12);
   box-shadow: var(--shadow-1);
   transition: all 0.5s ease;
-
 }
 
 .container2:hover {
@@ -1149,8 +1169,6 @@ textarea.input-field {
   position: relative;
   top: -50px;
   left: 50px;
-  
-  
 }
 
 .player-img img {
@@ -1163,16 +1181,15 @@ textarea.input-field {
 }
 
 .player-img:hover img {
-  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.6);  
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.6);
 }
 
-.player-img img.activeee{
+.player-img img.activeee {
   width: 100%;
   height: 100%;
-  transition; all 0.5s;
+  transition: all 0.5s;
   opacity: 1;
 }
-
 
 .music-title {
   font-size: 25px;
@@ -1188,16 +1205,16 @@ textarea.input-field {
   margin: 10px 0 20px;
 }
 
-.player-progress{
-background-color: #fff;
-border-radius: 5px;
-cursor: pointer;
-height: 6px;
-margin: 40px 20px 35px;
-width: 90%;
+.player-progress {
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 6px;
+  margin: 40px 20px 35px;
+  width: 90%;
 }
 
-.progress{
+.progress {
   background-color: #212121;
   border-radius: 5px;
   height: 100%;
@@ -1212,7 +1229,7 @@ width: 90%;
   justify-content: space-between;
 }
 
-.player-controls{
+.player-controls {
   position: relative;
   top: -5px;
   display: flex;
@@ -1221,7 +1238,7 @@ width: 90%;
   width: 200px;
 }
 
-.fa-solid{
+.fa-solid {
   font-size: 30px;
   color: var(--raw-seinna);
   margin-right: 30px;
@@ -1230,11 +1247,11 @@ width: 90%;
   transition: all 0.3s ease;
 }
 
-.fa-solid:hover{
-  filter: brightness(40%)
+.fa-solid:hover {
+  filter: brightness(40%);
 }
 
-.play-button{
+.play-button {
   font-size: 44px;
   position: relative;
   top: -6px;
@@ -1584,6 +1601,13 @@ button.activee {
 
   .navbar-link::before {
     height: 2px;
+  }
+
+  /** 
+  * Page Title
+  */
+  .hero-title {
+    padding-top: 0 !important;
   }
 
   /**
