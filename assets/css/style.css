@@ -1622,6 +1622,14 @@ button.activee {
   .testimonial-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .section-title {
+    padding-left: 15px;
+  }
+
+  .section-text {
+    padding-left: 15px;
+  }
 }
 
 /**
