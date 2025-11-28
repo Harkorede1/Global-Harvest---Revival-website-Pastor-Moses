@@ -1050,7 +1050,6 @@ textarea.input-field {
 .video-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
   overflow: hidden;
   cursor: pointer;
 }
