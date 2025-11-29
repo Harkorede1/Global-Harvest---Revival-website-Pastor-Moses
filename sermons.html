@@ -56,30 +56,30 @@
         <nav class="navbar" data-navbar>
           <ul class="navbar-list">
             <li>
-              <a href="./index.html" class="navbar-link">Home.</a>
+              <a href="./index.html" class="navbar-link">Home</a>
             </li>
             <li>
-              <a href="./about.html" class="navbar-link">About Us.</a>
+              <a href="./about.html" class="navbar-link">About Us</a>
             </li>
             <li>
-              <a href="./crusades.html" class="navbar-link">Crusades.</a>
+              <a href="./crusades.html" class="navbar-link">Crusades</a>
             </li>
             <li>
-              <a href="./testimonies.html" class="navbar-link">Testimonies.</a>
+              <a href="./testimonies.html" class="navbar-link">Testimonies</a>
             </li>
             <li>
               <a href="./booking.html" class="navbar-link" title="Make Bookings"
-                >Bookings.</a
+                >Bookings</a
               >
             </li>
             <li>
-              <a href="./sermons.html" class="navbar-link">Sermons.</a>
+              <a href="./sermons.html" class="navbar-link">Sermons</a>
             </li>
             <li>
-              <a href="#giving" class="navbar-link">Givings.</a>
+              <a href="#giving" class="navbar-link">Givings</a>
             </li>
             <li>
-              <a href="#biograph" class="navbar-link">Bio Of Leaders.</a>
+              <a href="#biograph" class="navbar-link">Bio Of Leaders</a>
             </li>
           </ul>
         </nav>
@@ -110,43 +110,47 @@
 
         <!-- SERMONS -->
         <section class="container2">
-          <div class="player-img">
+          <div class="music-player-container">
             <img
-              src="./assets/images/pastor-moses-booking-sec.jpg"
-              alt=""
-              class="activeee"
               id="cover2"
+              src="./assets/images/pastor-moses-booking-sec.jpg"
+              alt="Pastor Moses - booking section cover"
+              class="music-cover"
             />
-          </div>
 
-          <h2 class="music-title" id="music-title">Test</h2>
-          <h3 class="music-artist" id="music-artist">Test H2</h3>
+            <h3 id="music-title">Song Title</h3>
+            <p id="music-artist">Artist Name</p>
 
-          <div class="player-progress" id="player-progress">
-            <div class="progress" id="progress"></div>
-
-            <div class="music-duration">
-              <span id="current-time">0:00</span>
-              <span id="duration">0:00</span>
+            <!-- Progress Bar -->
+            <div id="player-progress" class="player-progress">
+              <div id="progress" class="progress"></div>
             </div>
-          </div>
 
-          <div class="player-controls">
-            <ion-icon
-              class="fa-solid fa-backward"
-              name="arrow-back"
-              title="Previous"
-            ></ion-icon>
-            <ion-icon
-              class="fa-solid fa-play play-button"
-              name="play-circle"
-              title="play"
-            ></ion-icon>
-            <ion-icon
-              class="fa-solid fa-forward"
-              name="arrow-forward"
-              title="Next"
-            ></ion-icon>
+            <div class="time-display">
+              <span id="current-time">00:00</span>
+              <span id="duration">00:00</span>
+            </div>
+
+            <audio id="audio"></audio>
+
+            <!-- Controls -->
+            <div class="music-controls">
+              <ion-icon
+                id="prev"
+                name="play-skip-back-circle"
+                class="control-btn"
+              ></ion-icon>
+              <ion-icon
+                id="play"
+                name="play-circle"
+                class="control-btn play-btn"
+              ></ion-icon>
+              <ion-icon
+                id="next"
+                name="play-skip-forward-circle"
+                class="control-btn"
+              ></ion-icon>
+            </div>
           </div>
         </section>
 
