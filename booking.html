@@ -18,6 +18,17 @@
 
     <!-- custom css link -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "Of4hPgO1CuV4zTC4Z",
+        });
+      })();
+    </script> -->
   </head>
   <body id="top" class="dark_theme">
     <!-- NAVIGATION -->
@@ -160,7 +171,7 @@
                   <h3 class="h4 contact-item-title">Address:</h3>
 
                   <address class="contact-info">
-                    941 Saqrqorish Road, alandalos, grnata, wa 47122-4194
+                    7033 King Creek Dr Sun City Center, Florida, USA
                   </address>
                 </div>
               </li>
@@ -174,11 +185,11 @@
                   <h3 class="h4 contact-item-title">Phone:</h3>
 
                   <a href="tel:01234567789" class="contact-info"
-                    >(01) 234 567 789</a
+                    >+1 (813) 430-8992</a
                   >
 
                   <a href="tel:09765432200" class="contact-info"
-                    >(09) 765 432 200</a
+                    >+1 (813) 430-8992</a
                   >
                 </div>
               </li>
@@ -192,11 +203,11 @@
                   <h3 class="h4 contact-item-title">Email:</h3>
 
                   <a href="mailto:info@jack.com" class="contact-info"
-                    >info@jack.com</a
+                    >contact@globalharvestrevival.org</a
                   >
 
                   <a href="mailto:support@jack.com" class="contact-info"
-                    >support@jack.com</a
+                    >contact@globalharvestrevival.org</a
                   >
                 </div>
               </li>
@@ -229,9 +240,9 @@
 
                   <li>
                     <a href="#" class="contact-social-link">
-                      <div class="tooltip">Youtube</div>
+                      <div class="tooltip">Instagram</div>
 
-                      <ion-icon name="logo-youtube"></ion-icon>
+                      <ion-icon name="logo-instagram"></ion-icon>
                     </a>
                   </li>
                 </ul>
@@ -239,7 +250,7 @@
             </ul>
           </div>
 
-          <form action="" class="contact-form">
+          <form id="booking-form" class="contact-form">
             <div class="form-wrapper">
               <label for="name" class="form-label">Full Name</label>
 
@@ -275,13 +286,13 @@
             </div>
 
             <div class="form-wrapper">
-              <label for="name" class="form-label">Title</label>
+              <label for="title" class="form-label">Title</label>
 
               <div class="input-wrapper">
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  name="title"
+                  id="title"
                   required
                   placeholder="e.g Sn Pastor, Event Coordinator"
                   class="input-field"
@@ -292,15 +303,15 @@
             </div>
 
             <div class="form-wrapper">
-              <label for="name" class="form-label"
+              <label for="church" class="form-label"
                 >Name of the Church/Ministry hosting the event ?
               </label>
 
               <div class="input-wrapper">
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  name="church"
+                  id="church"
                   required
                   placeholder="e.g Sn Pastor, Event Coordinator"
                   class="input-field"
@@ -311,15 +322,15 @@
             </div>
 
             <div class="form-wrapper">
-              <label for="name" class="form-label"
+              <label for="location" class="form-label"
                 >Where is the Church/Event located ?</label
               >
 
               <div class="input-wrapper">
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  name="location"
+                  id="location"
                   required
                   placeholder="Location of the event"
                   class="input-field"
@@ -330,13 +341,13 @@
             </div>
 
             <div class="form-wrapper">
-              <label for="name" class="form-label">Country & City </label>
+              <label for="country" class="form-label">Country & City </label>
 
               <div class="input-wrapper">
                 <input
                   type="text"
-                  name="name"
-                  id="name"
+                  name="country"
+                  id="country"
                   required
                   placeholder="country & city"
                   class="input-field"
@@ -377,14 +388,14 @@
             </div>
 
             <div class="form-wrapper">
-              <label for="phone" class="form-label"
+              <label for="number" class="form-label"
                 >What is expected Number of Participants ?</label
               >
 
               <div class="input-wrapper">
                 <input
                   type="number"
-                  name="number"
+                  name="participants"
                   id="number"
                   required
                   placeholder="Number of Participants"
@@ -430,6 +441,11 @@
 
             <button type="submit" class="btn btn-primary">Send</button>
           </form>
+
+          <div
+            id="form-message"
+            style="margin-top: 1rem; font-weight: 600"
+          ></div>
         </section>
 
         <!-- Fullscreen Video Modal -->
@@ -478,6 +494,54 @@
 
     <!-- Custom js link -->
     <script src="./assets/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "Of4hPgO1CuV4zTC4Z",
+        });
+      })();
+
+      const form = document.getElementById("booking-form");
+      const messageBox = document.getElementById("form-message");
+
+      function showMessage(text, isError = false) {
+        messageBox.textContent = text;
+        if (isError) {
+          messageBox.classList.add("error");
+        } else {
+          messageBox.classList.remove("error");
+        }
+        messageBox.classList.add("show");
+
+        // Hide after 10 seconds
+        setTimeout(() => {
+          messageBox.classList.remove("show");
+        }, 10000);
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_9th9s01", "template_dz9cifb", form).then(
+          function () {
+            showMessage(
+              "✅ Your message has been delivered. We will get back to you soon. God bless!"
+            );
+            form.reset();
+          },
+          function (error) {
+            console.error(error);
+            showMessage(
+              "❌ Something went wrong. Please try again later.",
+              true
+            );
+          }
+        );
+      });
+    </script>
 
     <!-- ionicons link -->
     <script

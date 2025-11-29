@@ -976,7 +976,7 @@ textarea.input-field {
 .section-title {
   font-size: 1.8rem;
   margin-bottom: 2rem;
-  color: #fff;
+  color: var(--color-primary);
 }
 
 .testimonial-grid {
@@ -1265,6 +1265,34 @@ textarea.input-field {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+/* form notification */
+#form-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f0f9f0; /* light green for success */
+  color: #0f7b0f;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 1000;
+}
+
+#form-message.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#form-message.error {
+  background-color: #fdecea;
+  color: #b00020;
 }
 
 /* FOOTER */
