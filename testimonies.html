@@ -308,7 +308,7 @@
         <!-- BOOKINGS -->
         <section class="contact" id="contact">
           <div class="contact-content section-content">
-            <p class="section-subtitle">Share you Testimony!😊/p></p>
+            <p class="section-subtitle">Share you Testimony!😊</p>
 
             <h2 class="h3 section-title">
               Do you have a testimony, share with us!
@@ -328,9 +328,7 @@
                 <div class="wrapper">
                   <h3 class="h4 contact-item-title">Address:</h3>
 
-                  <address class="contact-info">
-                    7033 King Creek Dr Sun City Center, Florida, USA
-                  </address>
+                  <address class="contact-info">FLORIDA, USA</address>
                 </div>
               </li>
 
@@ -341,10 +339,6 @@
 
                 <div class="wrapper">
                   <h3 class="h4 contact-item-title">Phone:</h3>
-
-                  <a href="tel:+1 (813) 430-8992" class="contact-info"
-                    >+1 (813) 430-8992</a
-                  >
 
                   <a href="tel:+1 (813) 430-8992" class="contact-info"
                     >+1 (813) 430-8992</a
@@ -367,9 +361,9 @@
                   >
 
                   <a
-                    href="mailto:contact@globalharvestrevival.org"
+                    href="mailto:globalharvestandrevival@gmail.com"
                     class="contact-info"
-                    >contact@globalharvestrevival.org</a
+                    >globalharvestandrevival@gmail.com</a
                   >
                 </div>
               </li>
@@ -412,7 +406,7 @@
             </ul>
           </div>
 
-          <form action="" id="bookings-form" class="contact-form">
+          <form id="bookings-form" class="contact-form">
             <div class="form-wrapper">
               <label for="name" class="form-label">Full Name</label>
 
@@ -465,6 +459,11 @@
 
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
+
+          <div
+            id="form-message"
+            style="margin-top: 1rem; font-weight: 600"
+          ></div>
         </section>
 
         <!-- Fullscreen Video Modal -->
@@ -500,6 +499,54 @@
 
     <!-- Custom js link -->
     <script src="./assets/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+      (function () {
+        emailjs.init({
+          publicKey: "Of4hPgO1CuV4zTC4Z",
+        });
+      })();
+
+      const form = document.getElementById("booking-form");
+      const messageBox = document.getElementById("form-message");
+
+      function showMessage(text, isError = false) {
+        messageBox.textContent = text;
+        if (isError) {
+          messageBox.classList.add("error");
+        } else {
+          messageBox.classList.remove("error");
+        }
+        messageBox.classList.add("show");
+
+        // Hide after 10 seconds
+        setTimeout(() => {
+          messageBox.classList.remove("show");
+        }, 10000);
+      }
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        emailjs.sendForm("service_9th9s01", "template_dz9cifb", form).then(
+          function () {
+            showMessage(
+              "✅ Your message has been delivered. We will get back to you soon. God bless!"
+            );
+            form.reset();
+          },
+          function (error) {
+            console.error(error);
+            showMessage(
+              "❌ Something went wrong. Please try again later.",
+              true
+            );
+          }
+        );
+      });
+    </script>
 
     <!-- ionicons link -->
     <script
