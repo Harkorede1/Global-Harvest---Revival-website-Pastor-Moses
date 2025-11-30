@@ -1669,6 +1669,10 @@ button.activee {
   .project-list > li:first-child {
     column-span: all;
   }
+
+  .quote-title {
+    color: var(--secondary);
+  }
 }
 
 /**
